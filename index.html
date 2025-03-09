@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson21</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="form">
+      <form action="https://www.google.com/search?" method="GET">
+        <input type="text" name="q" />
+      </form>
+      <form action="/save-user" id="form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" maxlength="8" required />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="0" max="10" />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="personal-number">Personal-Nunber</label>
+          <input
+            type="personal-number"
+            id="personal-number"
+            name="personal-number"
+          />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="mobile-number">Mobile-Nunber</label>
+          <input type="mobile-number" id="mobile-number" name="mobile-number" />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm-Password</label>
+          <input
+            type="confirm-password"
+            id="confirm-password"
+            name="confirm-password"
+          />
+          <span class="confirm-password"></span>
+        </div>
+        <button type="submit">submit</button>
+      </form>
+    </section>
+  </body>
+</html>
