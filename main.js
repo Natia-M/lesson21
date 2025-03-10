@@ -116,6 +116,16 @@ function formValidation() {
       return true;
     }
   };
+  const isPasswordValid = () => {
+    const val = passwordInput.value.trim();
+    if (val.length !== 6) {
+      showErrorMessage(passwordInput, "Password must consist of 6 characters");
+      return false;
+    } else {
+      showSuccessMessage(passwordInput, "Password is valid");
+      return true;
+    }
+  };
 
   nameInput.addEventListener("input", isNameValid);
   emailInput.addEventListener("input", isEmailValid);
@@ -123,6 +133,7 @@ function formValidation() {
   personalInput.addEventListener("input", isPersonalValid);
   mobileInput.addEventListener("input", isMobileValid);
   confirmInput.addEventListener("input", isConfirmValid);
+  passwordInput.addEventListener("input", isPasswordValid);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const nameValid = isNameValid();
@@ -131,13 +142,15 @@ function formValidation() {
     const personalValid = isPersonalValid();
     const mobileValid = isMobileValid();
     const confirmValid = isConfirmValid();
+    const passwordValid = isPasswordValid();
     if (
       nameValid &&
       emailValid &&
       ageValid &&
       personalValid &&
       mobileValid &&
-      confirmValid
+      confirmValid &&
+      passwordValid
     ) {
       console.log("Form is valid");
     }
